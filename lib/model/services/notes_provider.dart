@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'notes.dart';
+import '../core/notes.dart';
 class NotesProvider extends ChangeNotifier{
    final List <Notes> _notes= <Notes>[];
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:toddo_provider/model/authentication.dart';
+import 'package:toddo_provider/logic/view_models/authentication.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -132,8 +132,8 @@ class _SignupPageState extends State<SignupPage> {
                     onPressed: () {
                       String email = _emailController.text.trim();
                       String password = _passwordController.text.trim();
-                      Provider.of<Authentication>(context, listen: false)
-                          .registerWithEmailPassword(email, password);
+
+                      Authentication().registerWithEmailPassword(email, password);
                     },
                     child: const Padding(
                       padding: EdgeInsets.fromLTRB(40, 10, 40, 10),

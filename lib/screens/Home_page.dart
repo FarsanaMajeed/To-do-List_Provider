@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
-import 'package:toddo_provider/model/notes_provider.dart';
+import 'package:toddo_provider/model/services/notes_provider.dart';
 
-import '../model/notes.dart';
+import '../model/core/notes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

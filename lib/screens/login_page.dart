@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:toddo_provider/model/authentication.dart';
+import 'package:toddo_provider/logic/view_models/authentication.dart';
 import 'package:toddo_provider/screens/signup_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -90,8 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       String email = _emailController.text.trim();
                       String password = _passwordController.text.trim();
-                      Provider.of<Authentication>(context, listen: false)
-                          .loginWithEmailPassword(email, password);
+                      Authentication().loginWithEmailPassword(email, password);
                     },
                   ),
                   InkWell(
