@@ -7,9 +7,6 @@ class NotesProvider extends ChangeNotifier{
   List<Notes> get getNotes{
     return _notes;
   }
-
-
-
   void addNotes(String title,String description){
     Notes notes = Notes(title, description);
     _notes.add(notes);
